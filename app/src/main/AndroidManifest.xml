@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.odds.preintent">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:icon="@mipmap/icon_launcher"
+        android:label="preIntent"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity
+            android:name="com.example.odds.pre_intent.NextActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.odds.pre_intent.PreIntentOriginActivity"
+            android:exported="true"
+            android:label="module库测试/PreIntent测试页">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.odds.pre_intent.TestPreIntentActivity" />
+    </application>
+
+</manifest>
